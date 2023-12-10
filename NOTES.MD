@@ -27,10 +27,39 @@
 
 
 ## 6. CSS - STYLING NOTES
-- Whenever you want to create one block over another, you can use h1 and div like following
+6.1. Whenever you want to create one block over another, you can use h1 and div like following
 - h1
 -div
 --item1
 --item2 etc
 
--object:cover, object-fit
+6.2. object:cover, object-fit
+
+6.3. HOW TO OVERRIDE STYLE'S PROPERTY WITH EVEN OR ODD NUMBERS: 
+
+.item {
+    display:flex;
+    flex-direction:row;
+}
+
+//IF item is an even item, like 2nd or 4rd or 6th, override the style.
+.item:nth-child(2n){
+    flex-direction:row-reverse;
+}
+
+## 7. DATA FETCHING IN NEXT.JS
+- In Next.js, you can fetch data from client side or server side, if you fetch it from client side, client side will render first.
+
+1.CLIENT SIDE: 
+--UseState
+--ReactQuery etc.
+
+2.SERVER SIDE
+-change component to async component.
+--If your data never changes, you can use {cache:"force-cache"}, its called static fetching
+--If it changes sometimes, you can use revalidating,
+--If it always changes, then you can use {cache:"no-store"} and its called DYNAMIC FETCHING
+
+## 8. API
+- Just like we do in the pages, you create your api/route folder in the app folder.
+- for /posts endpoint, create app/api/posts/route.js path, then you have the path.

@@ -4,16 +4,41 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'upload.wikimedia.org',
-        port: '',
+        protocol: "https",
+        hostname: "upload.wikimedia.org",
+        port: "",
       },
       {
-        protocol: 'https',
-        hostname: 'www.bournemouth.ac.uk',
-        port: '',
+        protocol: "https",
+        hostname: "romefountains2016.files.wordpress.com",
+        port: "",
       },
-    ]
+      {
+        protocol: "https",
+        hostname: "www.bournemouth.ac.uk",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "placekitten.com",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "www.salesforce.com",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "harreira.com",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "images2.minutemediacdn.com",
+        port: "",
+      },
+    ],
   },
 };
 
