@@ -63,3 +63,13 @@
 ## 8. API
 - Just like we do in the pages, you create your api/route folder in the app folder.
 - for /posts endpoint, create app/api/posts/route.js path, then you have the path.
+
+
+## 9. NEXT-SEO
+- You can change title and description of METADATA in server side in NEXT.JS, this is why NEXT.JS is so strong.
+- USE dynamic metadata.
+
+## 10.NEXT AUTH
+- USE NEXT AUTH
+- USE AN AUTHPROVIDER as Component
+- Use hooks to reach session values.

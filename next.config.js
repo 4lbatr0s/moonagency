@@ -38,6 +38,11 @@ const nextConfig = {
         hostname: "images2.minutemediacdn.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "images.theconversation.com",
+        port: "",
+      },
     ],
   },
 };

@@ -14,12 +14,13 @@ const userSchema = new Schema(
       unique: true,
       required: true,
     },
-    email: {
+    password: {
       type: String,
-      unique: true,
+      required: true,
     },
   },
   { timestamps: true }
 );
 
-export default mongoose.Model("User", userSchema);
+//If the User collection does not exist create a new one.
+export default mongoose.models.User || mongoose.model("User", userSchema);

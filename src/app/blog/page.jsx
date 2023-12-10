@@ -2,27 +2,34 @@ import React from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import blogPosts from "./data";
 
-// async function getData() {
-//   const res = await fetch("http://localhost:3000/api/posts", {
-//     cache: "no-store",
-//   });
+async function getData() {
+  const res = await fetch("http://localhost:3000/api/posts", {
+    cache: "no-store",
+  });
 
-//   if (!res.ok) {
-//     throw new Error("Failed to fetch data");
-//   }
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
 
-//   return res.json();
-// }
+  return res.json();
+}
 
+//INFO: HOW TO DYNAMIC METADATA IN NEXT.JS
+export async function generateMetadata({ params }) {
+  const post = await getData(params.id);
+  return {
+    title: post.title,
+    desc: post.desc,
+  };
+}
 
 //INFO: async because its a server side data fetching component.
 const Blog = async () => {
-  // const data = await getData();
+  const data = await getData();
   return (
     <div className={styles.mainContainer}>
-      {blogPosts.map((item) => (
+      {data.map((item) => (
         <Link
           href={`/blog/${item._id}`}
           className={styles.container}

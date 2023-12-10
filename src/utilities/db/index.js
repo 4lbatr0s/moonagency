@@ -2,9 +2,10 @@ import mongoose from "mongoose";
 
 const connect = async () => {
   try {
-    await mongoose.connect(process.env.MONGO);
+    console.log(process.env.NEXT_PUBLIC_MONGO)
+    await mongoose.connect(process.env.NEXT_PUBLIC_MONGO);
   } catch (error) {
-    throw new Error("connection failed");
+    throw new Error(`Connection failed! :${error}`);
   }
 };
 
