@@ -23,3 +23,10 @@ export default function Home() {
     </div>
   );
 }
+
+const baseUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://www.moonagency.vercel.app"
+    : "http://localhost:3000";
+
+export { baseUrl }
