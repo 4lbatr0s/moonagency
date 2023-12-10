@@ -55,5 +55,3 @@ Ready to go live? Deploy your Moon Agency app effortlessly using [Vercel](https:
 We welcome your contributions! Feel free to open issues or submit pull requests to enhance Moon Agency.
 
 **Experience the Future of Digital Solutions with Moon Agency!**
-
-Feel free to further customize the content according to your preferences and any additional information you'd like to highlight.
