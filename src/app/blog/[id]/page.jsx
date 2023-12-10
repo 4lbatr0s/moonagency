@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { baseUrl } from "@/app/page";
 
 async function getData(id) {
-  const res = await fetch(`${baseUrl}/api/posts/${id}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts/${id}`, {
     cache: "no-store",
   });
 
