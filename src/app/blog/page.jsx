@@ -6,7 +6,7 @@ import { baseUrl } from "../page";
 
 async function getData() {
   //INFO: IF ITS SERVER SIDE, THEN WE SHOULD INCLUDE ENTIRE URL, IF ITS CLIENT SIDE, JUST PASS THE PATH.
-  const res = await fetch(`${proces.env.NEXT_PUBLIC_BASE_URL}/api/posts`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts`, {
     cache: "no-store",
   });
 
