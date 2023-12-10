@@ -6,8 +6,7 @@ import useSWR from "swr";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-
-
+import { baseUrl } from "../page";
 
 const Dashboard = () => {
   //INFO: HOW TO USE AUTHENTICATION in NEXT.JS
