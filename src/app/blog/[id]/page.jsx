@@ -22,8 +22,7 @@ async function getData(id) {
 }
 
 export async function generateMetadata({ params }) {
-  if (!process.env.NEXT_PUBLIC_BASE_URL) {
-    console.log(process.env.NEXT_PUBLIC_BASE_URL)
+  if (!BASE_API_URL) {
     return null;
   }
   const post = await getData(params.id);
