@@ -1,5 +1,5 @@
 const footerConsts = {
-  TEXT: "©2023 Lamamia. All rights reserved",
+  TEXT: "©2023 Serhat/4lbatr0s. All rights reserved",
 };
 
 Object.freeze(footerConsts);

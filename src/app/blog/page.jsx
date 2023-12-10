@@ -16,13 +16,10 @@ async function getData() {
 }
 
 //INFO: HOW TO DYNAMIC METADATA IN NEXT.JS
-export async function generateMetadata({ params }) {
-  const post = await getData(params.id);
-  return {
-    title: post.title,
-    desc: post.desc,
-  };
-}
+export const metadata = {
+  title: "Moon Agency Blog - Insights and Inspiration",
+  description: "Explore the Moon Agency blog for insightful articles on digital trends, industry news, and tips to enhance your online presence. Stay informed and inspired in the ever-evolving digital landscape.",
+};
 
 //INFO: async because its a server side data fetching component.
 const Blog = async () => {

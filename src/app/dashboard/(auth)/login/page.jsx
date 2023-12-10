@@ -5,6 +5,7 @@ import { getProviders, signIn, useSession } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 
+
 const Login = ({ url }) => {
   const session = useSession();
   const router = useRouter();
@@ -12,6 +13,7 @@ const Login = ({ url }) => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
+  
   useEffect(() => {
     setError(params.get("error"));
     setSuccess(params.get("success"));
@@ -38,8 +40,8 @@ const Login = ({ url }) => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>{success ? success : "Welcome Back"}</h1>
-      <h2 className={styles.subtitle}>Please sign in to see the dashboard.</h2>
+      <h1 className={styles.title}>{success ? success : "Welcome Again"}</h1>
+      <h2 className={styles.subtitle}>Please log in to access your dashboard.</h2>
 
       <form onSubmit={handleSubmit} className={styles.form}>
         <input

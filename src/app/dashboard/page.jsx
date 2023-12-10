@@ -7,6 +7,8 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
+
+
 const Dashboard = () => {
   //INFO: HOW TO USE AUTHENTICATION in NEXT.JS
   const session = useSession();

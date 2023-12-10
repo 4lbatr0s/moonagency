@@ -14,7 +14,7 @@
 /*INFO: HOW TO CREATE TAILWIND-LIKE TEXTS*/
 .title {
   font-size: 72px;
-  background: linear-gradient(to bottom, #194c33, #bbb);
+  background: linear-gradient(to top, #5D74FB, #bbb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -52,7 +52,7 @@ Meaning:
   padding: 20px;
   font-weight: 400;
   cursor: pointer;
-  background-color: #53c28b;
+  background-color: #5D74FB;
   border: none;
   border-radius: 5px;
   width: max-content;

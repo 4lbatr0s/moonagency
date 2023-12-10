@@ -2,6 +2,12 @@ import React from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 import Button from "@/components/Button/Button";
+
+export const metadata = {
+  title: "About Moon Agency - Our Story and Mission",
+  description: "Learn about Moon Agency, our journey, and our mission to blend creativity with technology. Explore how we've become a leading force in the digital landscape, dedicated to solving real-life problems through innovation.",
+};
+
 const About = () => {
   return (
     <div className={styles.container}>

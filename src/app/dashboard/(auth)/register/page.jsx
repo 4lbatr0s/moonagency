@@ -4,6 +4,12 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
+// REGISTER PAGE METADATA
+export const metadata = {
+  title: "Moon Agency Register - Join Our Digital Community",
+  description: "Create your Moon Agency account and become part of our digital community. Unlock exclusive features, stay updated on industry insights, and explore opportunities for collaboration.",
+};
+
 const Register = () => {
   const [error, setError] = useState(null);
 

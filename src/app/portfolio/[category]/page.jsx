@@ -11,6 +11,14 @@ const getData = (cat) => {
   return notFound();
 };
 
+export async function generateMetadata({ params }) {
+  const post = await getData(params.category);
+  return {
+    title: post.category,
+    description: post.category,
+  };
+}
+
 const Category = ({ params }) => {
   const data = getData(params.category); //INFO: HOW TO GET LOCAL DATA.
   return (
@@ -24,7 +32,7 @@ const Category = ({ params }) => {
             <Button text="See More" url="#" />
           </div>
           <div className={styles.imgContainer}>
-            <Img className={styles.image} fill={true} src={item.img} alt="" />
+            <Img className={styles.image} fill={true} src={item.image} alt="" />
           </div>
         </div>
       ))}
