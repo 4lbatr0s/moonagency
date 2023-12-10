@@ -25,6 +25,9 @@ export const metadata = {
 
 //INFO: async because its a server side data fetching component.
 const Blog = async () => {
+  if(!process.env.NEXT_PUBLIC_BASE_URL) {
+    return null;
+  }
   const data = await getData();
   return (
     <div className={styles.mainContainer}>
