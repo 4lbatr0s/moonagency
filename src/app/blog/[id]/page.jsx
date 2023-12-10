@@ -3,10 +3,12 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { baseUrl } from "@/app/page";
+import { BASE_API_URL } from "@/utilities/constants/env";
 
 async function getData(id) {
+  console.log(process.env.NEXT_PUBLIC_BASE_URL);
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/posts/${id}`,
+    `${BASE_API_URL}/api/posts/${id}`,
     {
       cache: "no-store",
     }
@@ -21,6 +23,7 @@ async function getData(id) {
 
 export async function generateMetadata({ params }) {
   if (!process.env.NEXT_PUBLIC_BASE_URL) {
+    console.log(process.env.NEXT_PUBLIC_BASE_URL)
     return null;
   }
   const post = await getData(params.id);

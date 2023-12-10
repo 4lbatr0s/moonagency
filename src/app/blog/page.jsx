@@ -3,10 +3,11 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { baseUrl } from "../page";
+import { BASE_API_URL } from "@/utilities/constants/env";
 
 async function getData() {
   //INFO: IF ITS SERVER SIDE, THEN WE SHOULD INCLUDE ENTIRE URL, IF ITS CLIENT SIDE, JUST PASS THE PATH.
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts`, {
+  const res = await fetch(`${BASE_API_URL}/api/posts`, {
     cache: "no-store",
   });
 
@@ -20,12 +21,13 @@ async function getData() {
 //INFO: HOW TO DYNAMIC METADATA IN NEXT.JS
 export const metadata = {
   title: "Moon Agency Blog - Insights and Inspiration",
-  description: "Explore the Moon Agency blog for insightful articles on digital trends, industry news, and tips to enhance your online presence. Stay informed and inspired in the ever-evolving digital landscape.",
+  description:
+    "Explore the Moon Agency blog for insightful articles on digital trends, industry news, and tips to enhance your online presence. Stay informed and inspired in the ever-evolving digital landscape.",
 };
 
 //INFO: async because its a server side data fetching component.
 const Blog = async () => {
-  if(!process.env.NEXT_PUBLIC_BASE_URL) {
+  if (!process.env.NEXT_PUBLIC_BASE_URL) {
     return null;
   }
   const data = await getData();
